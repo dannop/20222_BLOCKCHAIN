@@ -4,7 +4,6 @@ class ApplicationController < ActionController::API
   
   before_action :only_json
   before_action :authenticate_request
-  # before_action :set_paper_trail_whodunnit
 
   private
     def only_json
@@ -19,9 +18,4 @@ class ApplicationController < ActionController::API
       decoded = jwt_decode(header)
       @current_user = User.find(decoded[:user_id])
     end
-
-    # Método exigido pelo Papertrail
-    # def current_user 
-    #   current_user ||= @current_user
-    # end
 end
