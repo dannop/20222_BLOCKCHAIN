@@ -1,0 +1,27 @@
+{
+  "ApplicationConfiguration": {
+    "Paths": {
+      "Chain": "Chain_{0}",
+      "Index": "Index_{0}"
+    },
+    "P2P": {
+      "Port": 20333,
+      "WsPort": 10333,
+      "MaxConnectionsPerAddress": 10
+    },
+    "RPC": {
+      "BindAddress": "0.0.0.0",
+      "Port": 30333,
+      "SslCert": "",
+      "SslCertPassword": "",
+      "ExtraGasInvoke": "0",
+      "MaxConcurrentConnections": "10"
+    },
+    "UnlockWallet": {
+      "Path": "wallet1.json",
+      "Password": "one",
+      "StartConsensus": true,
+      "IsActive": true
+    }
+  }
+}

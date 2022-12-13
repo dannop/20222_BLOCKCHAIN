@@ -1,0 +1,34 @@
+version: "3.7"
+
+networks:
+  frontend_http:
+    driver: bridge
+
+services:
+  eco-neo-frontend-express-running:
+    image: eco-neo-frontend-express
+    container_name: "eco-neo-frontend-express-running"
+    ports:
+      - "$DOOR_FRONTEND_HTTP:$DOOR_FRONTEND_HTTP"
+    environment:
+      - DOOR_FRONTEND_HTTP=$DOOR_FRONTEND_HTTP
+    volumes:
+      - ./appHttp.js:/opt/appHttp.js
+      - ./runHttpExpress.sh:/opt/runHttpExpress.sh
+      - ./node_modules:/opt/node_modules
+      - ../index.html:/opt/index.html
+      - ../public:/opt/public/
+      - ../examples:/opt/examples/
+    healthcheck:
+      test:
+        - CMD
+        - bash
+        - '-c'
+        - exec 6<>/dev/tcp/127.0.0.1/$DOOR_FRONTEND_HTTP
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - frontend_http
+    command: /opt/runHttpExpress.sh

@@ -1,0 +1,58 @@
+version: "3.7"
+
+networks:
+  compilers_express:
+    driver: bridge
+
+services:
+  eco-neo-compilers-express-running:
+    image: eco-neo-ubuntu-docker-node-express
+    container_name: "eco-neo-compilers-express-running"
+    ports:
+      - "$DOOR_COMPILERS:$DOOR_COMPILERS"
+    environment:
+      - DOOR_COMPILERS=$DOOR_COMPILERS
+      - BUILD_ALL_CSHARP=$BUILD_ALL_CSHARP
+      - BUILD_CSHARP=$BUILD_CSHARP
+      - BUILD_GO=$BUILD_GO
+      - BUILD_BOA=$BUILD_BOA
+      - BUILD_JAVA=$BUILD_JAVA
+    volumes:
+      - ./appCompiler.js:/opt/appCompiler.js
+      - ./run-CompilerExpress-RPC.sh:/opt/run-CompilerExpress-RPC.sh
+      - ./buildCompilers.sh:/opt/buildCompilers.sh
+      - ./.env:/opt/.env
+      - ./package.json:/opt/package.json
+      - ./compilers:/opt/compilers
+      - ./node_modules:/opt/node_modules
+      - $LOCAL_DOCKER_SOCK:/var/run/docker.sock
+    healthcheck:
+      test:
+        - CMD
+        - bash
+        - '-c'
+        - exec 6<>/dev/tcp/127.0.0.1/$DOOR_COMPILERS
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - compilers_express
+    labels:
+      autoheal: 'true'
+    command: /opt/run-CompilerExpress-RPC.sh
+
+  eco-neo-autoheal-services-compilers:
+    image: willfarrell/autoheal
+    container_name: eco-neo-autoheal-services-compilers
+    depends_on:
+      - eco-neo-compilers-express-running
+    environment:
+      - AUTOHEAL_CONTAINER_LABEL=autoheal
+      - AUTOHEAL_INTERVAL=5
+      - DOCKER_SOCK=/var/run/docker.sock
+    networks:
+      - compilers_express
+    restart: always
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
