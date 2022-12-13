@@ -1,0 +1,53 @@
+@import '../../../styles/colors', '../../../styles/formats';
+
+.detail-modal {
+    .modal-content {
+        border-radius: $border-radius-lg;
+    }
+    .modal-header {
+        padding: $spacing-stack-medium;
+        padding-left: $spacing-stack-xlarge;
+        padding-bottom: 0;
+        border: none;
+
+        .btn-close {
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z' fill='black'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-size: 24px;
+            opacity: 1;
+
+            &:hover {
+                opacity: .7;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+
+    .modal-body {
+        padding: $spacing-stack-large $spacing-stack-xlarge;
+        // max-height: calc(100vh - 300px);
+        // overflow: auto;
+        // margin-right: 8px;
+
+        // // Firefox scrollbar
+        // scrollbar-width: thin;
+        // // scrollbar-color: $NEUTRAL_MEDIUM $NEUTRAL_LIGHT;
+
+        // &::-webkit-scrollbar {
+        //     width: 6px;
+        // }
+        
+        // &::-webkit-scrollbar-track {
+        //     // background: rgba($NEUTRAL_LIGHT, 0.2);
+        //     border-radius: 10px;
+        // }
+        
+        // &::-webkit-scrollbar-thumb {
+        //     // background: $NEUTRAL_MEDIUM;
+        //     border-radius: 10px;
+        // }
+    }
+}

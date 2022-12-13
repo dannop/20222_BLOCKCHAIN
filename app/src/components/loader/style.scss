@@ -1,0 +1,98 @@
+@import '../../styles/colors';
+
+.fallback-spinner {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  
+	.loading {
+	  border-radius: 50%;
+	  border: 3px solid transparent;
+	  -webkit-box-sizing: border-box;
+	  box-sizing: border-box;
+  
+	  .effect-1,
+	  .effect-2,
+	  .effect-3 {
+		border-radius: 50%;
+		border: 3px solid transparent;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	  }
+  
+	  .effect-1 {
+		position: absolute;
+		animation: rotate 1s ease infinite;
+	  }
+	  .effect-2 {
+		position: absolute;
+		animation: rotateOpacity 1s ease infinite 0.1s;
+	  }
+	  .effect-3 {
+		-webkit-animation: rotateOpacity 1s ease infinite 0.2s;
+		animation: rotateOpacity 1s ease infinite 0.2s;
+	  }
+  
+	  .loading .effects {
+		transition: all 0.3s ease;
+	  }
+	}
+
+	&.spinner-primary {
+		.effect-1,
+		.effect-2,
+		.effect-3 {
+			border-left: 3px solid rgba($color-brand-primary-dark, 1);
+		}
+	}
+
+	&.spinner-white {
+		.effect-1,
+		.effect-2,
+		.effect-3 {
+			border-left: 3px solid rgba($color-base-white, 1);
+		}
+	}
+}
+  
+.background {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.3);
+	z-index: 1000;
+}
+
+.fixed {
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+@keyframes rotate {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(1turn);
+		transform: rotate(1turn);
+	}
+}
+@keyframes rotateOpacity {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		opacity: 0.1;
+	}
+	100% {
+		-webkit-transform: rotate(1turn);
+		transform: rotate(1turn);
+		opacity: 1;
+	}
+}
+  

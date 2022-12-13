@@ -1,0 +1,62 @@
+@import '../../styles/colors', '../../styles/formats', '../../styles/typography';
+
+.search-bar {
+    position: relative;
+
+    input {
+        height: 56px;
+        width: 100%;
+        padding: $spacing-stack-small $spacing-stack-xxlarge;
+        padding-right: $spacing-stack-small;
+
+        border-radius: $border-radius-sm;
+        border: $border-widths-md solid $color-aliases-plataforma-border;
+
+        font-family: $font-families-reading;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-md;
+        line-height: $line-height-lg;
+        color: $color-aliases-plataforma-textdefault;
+        margin: 0;
+
+        transition: .2s;
+
+        &::placeholder {
+            color: $color-aliases-plataforma-placeholder;
+        }
+
+        &::-webkit-search-cancel-button{
+            position:relative;
+            // right:20px;  
+            cursor: pointer;
+        
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12 10.59L15.59 7L17 8.41L13.41 12L17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59Z' fill='%233F353D'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &:focus {
+            border-color: $color-brand-primary-dark;
+
+            & + svg {
+                path {
+                    fill: $color-brand-primary-dark;
+                }
+            }
+        }
+    }
+
+    svg {
+        position: absolute;
+        left: $spacing-stack-small;
+        top: 50%;
+        transform: translateY(-50%);
+
+        path {
+            transition: .2s;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+@import '../../../styles/colors', '../../../styles/formats', '../../../styles/typography';
+
+.text-input-container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    position: relative;
+
+    &.filled {
+        label {
+            color: $color-aliases-plataforma-textdefault;
+        }
+        input, textarea {
+            border-color: $color-aliases-plataforma-textdefault;
+        }
+        .right-icon {
+            svg {
+                path {
+                    fill: $color-aliases-plataforma-textdefault
+                }
+            }
+        }
+    }
+
+    &.invalid, &:invalid {
+        label {
+            color: $color-feedback-error-base !important;
+        }
+        input, textarea {
+            border-color: $color-feedback-error-base !important;
+        }
+        .right-icon {
+            svg {
+                path {
+                    fill: $color-feedback-error-base !important;
+                }
+            }
+        }
+    }
+
+    .right-icon {
+        position: absolute;
+        right: $spacing-stack-small;
+        bottom: $spacing-stack-small;
+        cursor: default;
+
+        svg {
+            path {
+                fill: $color-aliases-plataforma-border;
+                transition: .2s;
+            }
+        }
+
+        &.icon-btn {
+            cursor: pointer;
+            svg {
+                path {
+                    fill: $color-aliases-plataforma-textdefault;
+                }
+            }
+        }
+    }
+    
+    input, textarea {
+        width: 100%;
+        height: $spacing-stack-xxxlarge;
+        border: $border-widths-md solid $color-aliases-plataforma-border;
+        border-radius: $border-radius-sm;
+        padding: 0 $spacing-stack-small;
+        background-color: $color-base-white;
+        transition: .2s;
+        color: $color-aliases-plataforma-textdefault;
+        font: $font-weight-medium $font-size-md $font-families-default;
+
+        &:focus {
+            border-color: $color-brand-primary-dark;
+        }
+        &:focus + label {
+            color: $color-brand-primary-dark;
+
+            & + .right-icon {
+                svg {
+                    path {
+                        fill: $color-brand-primary-dark;
+                    }
+                }
+            }
+        }
+
+        &::placeholder {
+            color: $color-aliases-plataforma-border;
+        }
+
+        &:disabled {
+            border-color: $color-aliases-plataforma-border;
+
+            & + label {
+                color: $color-aliases-plataforma-border;
+            }
+        }
+    }
+
+    textarea {
+        height: unset;
+        min-height: 145px;
+        padding: $spacing-stack-small;
+    }
+
+    label {
+        color: $color-aliases-plataforma-textdefault;
+        text-align: left;
+        transition: .2s;
+        position: absolute;
+        top: -10px;
+        left: 12px;
+        background: $color-base-white;
+        padding: 4px;
+    }
+}
+
+.support-text {
+    color: $color-text-500;
+
+    &.invalid {
+        color: $color-feedback-error-base;
+    }
+}

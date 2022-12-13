@@ -1,0 +1,561 @@
+.n-padding {
+    padding: 0!important;
+}
+
+.deploy-bg {
+    background: #223237!important;
+    height: auto;
+}
+
+.deploy-bg label {
+    font-size: 13px!important;
+}
+
+.deploy-bg input {
+    background: #444444;
+    border-color: #00AF92;
+    color: white!important;
+}
+
+
+.deploy-bg input:focus {
+    background: #00AF92;
+    border-color: #00AF92;
+    color: white!important;
+}
+
+
+.deploy-bg option {
+    background: #00AF92;
+    color: white;
+}
+
+.deploy-bg input:focus {
+    background: #00AF92;
+    border-color: #1D2C30;
+    color: white!important;
+}
+
+.btn-info {
+    background: #00AF92!important;
+    border-color: #00AF92!important;
+}
+
+.btn-info:hover {
+    background: #1e1e1e!important;
+    border-color: #ffffff!important;
+}
+
+.btn-info:focus {
+    background: #00AF92!important;
+    border-color: #ffffff!important;
+}
+
+.green-title {
+    float: left;
+    width: 100%;
+    background: #747287;
+    color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 10px 10px 10px 30px;
+}
+
+.tab-pane.fade {
+    transition: all 0.2s;
+    transform: none;
+}
+
+.preloader {
+    z-index: 3000000!important;
+}
+
+.preloader.fade {
+    transition: all 0.2s;
+    transform: translateX(1rem);
+}
+
+.preloader.fade.show {
+    transform: translateX(0rem);
+}
+
+html,
+body {
+    background: #263A40;
+}
+
+.nav {
+    z-index: 1000000!important;
+}
+
+.nav {
+    background: #223237;
+    position: fixed;
+    float: left;
+    width: 100%;
+}
+
+.nav li {
+    width: 100px;
+}
+
+.opt-select {
+    padding: 20px 0 10px 0;
+}
+
+.opt-options-header {
+    position: fixed;
+    float: left;
+    right: 0;
+    top: 0;
+    padding: 10px 70px 0 0;
+    z-index: 2000000!important;
+}
+
+.logo-item {
+    background: #1D2C30;
+    width: 100px;
+}
+
+.breadcrumb {
+    background: none;
+}
+
+.breadcrumb a {
+    color: white!important;
+}
+
+.nav-links {
+    padding-top: 20px;
+}
+
+.menu-vertical {
+    position: fixed;
+    top: 80px;
+    float: left;
+    width: 100px;
+    display: block;
+    height: 100%!important;
+    background: #1D2C30;
+}
+
+.menu-vertical li {
+    display: inline-table;
+    text-align: center;
+    box-sizing: unset!important;
+    height: 8%;
+    background: #1D2C30;
+}
+
+.menu-vertical li a p {
+    margin-bottom: 10px!important;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.menu-vertical li a:hover {
+    background: #263A40;
+    border-bottom: 5px solid #00AF92;
+}
+
+.menu-vertical *,
+ ::after,
+ ::before {
+    box-sizing: unset;
+}
+
+.menu-vertical li a {
+    color: white;
+    height: 100%;
+    border-bottom: 5px solid transparent;
+    padding: 15% 0 0 0!important;
+    bottom: 0!important;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu-vertical .active {
+    background: #263A40;
+    border-bottom: 5px solid #00AF92;
+}
+
+.tab-content {
+    float: left;
+    width: 100%;
+}
+
+#aceEditor {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    float: left;
+    width: 100%;
+    height: 350px;
+    border-top: 8px solid #00AF92;
+    background: #223237;
+}
+
+.ace_print-margin {
+    display: none!important;
+}
+
+.ace_gutter-active-line {
+    background: #162124 !important;
+}
+
+.ace_gutter {
+    background: #1D2C30!important;
+}
+
+.ace_active-line {
+    background: #1D2C30!important;
+}
+
+.form-select {
+    background-color: #00AF92;
+    color: white!important;    
+    border-radius: 20px!important;
+}
+
+.btn-compile {
+    background: #00AF92;
+    color: white!important;
+    border-radius: 20px!important;
+    order: 1px solid #1D2C30;
+    text-align: center!important;            
+}
+
+.btn-compile:hover {
+    background: white;
+    border: 1px solid #00AF92;
+    color: #00AF92;
+    background: #95f7e7;
+}
+
+.version-compile {
+    float: left;
+    color: white;
+}
+
+.container-colapse .container .errors-warnings {}
+
+.errors-warnings {
+    margin-top: 15px;
+    color: white;
+}
+
+.errors-warnings h4 {
+    font-size: 16px;
+}
+
+.errors-warnings .display-erros {
+    margin-top: 20px;
+    padding: 10px;
+    float: left;
+    width: 100%;
+    background: #162124;
+    height: 200px;
+}
+
+.preloader .spinner-grow {
+    background: #00AF92;
+    position: absolute;
+    top: 50%;
+    float: left;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align-last: center;
+    left: 50%;
+}
+
+.collapseMore {
+    background: #00AF92;
+    border-radius: 50% 0 0 50%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+#collapseMore {
+    transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    /* Firefox 4 */
+    -webkit-transition: height 0.5s;
+    /* Safari and Chrome */
+    -o-transition: height 0.5s;
+    /* Opera */
+}
+
+.collapseMore img {}
+
+.container-colapse {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    background: #1D2C30;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    border-top: 10px solid #00AF92;
+}
+
+
+
+.btn-warning {
+    background: #162124!important;
+    border-color: #162124!important;
+}
+
+
+
+
+#codeabi {
+    resize: none!important;
+}
+
+input {
+    outline: none!important;
+}
+
+input:focus {
+    outline: none!important;
+    border-color: transparent!important;
+}
+
+
+/* Not used anymore - it was for compilers options
+.opts-compilers {
+    padding-top: 15px;
+    max-width: 200px;
+    color: white;
+    margin-left: 25px;
+    float: right;
+}
+
+.opts-compilers input {
+    width: 30px;
+}
+*/
+
+
+
+textarea {
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 5px solid #00AF92;
+    resize: none;
+    outline: none!important;
+    color: white;
+}
+
+textarea:focus {
+    outline: none!important;
+    border-color: transparent!important;
+}
+
+.small-screen {
+    display: none;
+}
+
+
+.menu-vertical::-webkit-scrollbar-track {
+    background-color: rgba(0, 175, 146, 1);
+}
+
+.menu-vertical::-webkit-scrollbar {
+    width: 2px;
+    background-color: rgba(0, 175, 146, 1);
+}
+
+.menu-vertical::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 175, 146, 1);
+}
+
+
+
+.select2-dropdown {
+    z-index: 2000000!important;
+}
+
+.pulse {
+    animation: pulse 0.7s infinite, fade 500ms;
+    margin: 0 auto;
+    display: table;
+    margin-top: 50px;
+    animation-direction: alternate;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    font-size: 15px!important;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        -webkit-filter: brightness(100%);
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+        -webkit-filter: brightness(200%);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.blink_element {
+    animation: buttonPulse 1s linear infinite, fade 500ms;
+}
+
+.blink_element_pause {
+    animation-play-state: paused !important;
+}
+
+@keyframes buttonPulse {
+    0% {
+        transform: scale(0.75);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    100% {
+        transform: scale(0.75);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+.reg-wallet {
+    margin-bottom: 60px!important;
+}
+
+
+.table .headerrd td,
+.table th {
+    border-top: transparent!important;
+}
+
+.twalllet td {
+    border-top: 1px solid #0aab7b!important;
+}
+
+#codeavm {
+    color: #0aab7b!important;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 1px dashed #263A40;
+    color: #0aab7b!important;
+}
+
+/*
+*[contenteditable='true']:hover,
+*[contenteditable='true']:focus {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}*/
+
+
+/* Begin Navigation tab style */
+
+.aceLITabs {
+    background-color: #223237!important;
+    float: left;
+    position: relative!important;
+    z-index: 0!important;
+/*    height: 45px!important; */
+/*    max-height: 35px!important;*/
+}
+
+
+
+.aceLITabs li {
+    background: #09af92!important;
+    color: white!important;
+    text-align: center!important;
+    float: left;
+    width: 10%;    
+    padding-top: 0.4%!important;
+    padding-bottom: 0.4%!important;
+    /*border-right: 1px solid #07a58a !important;
+    max-height: 35px!important;*/
+}
+
+.aceLITabs li:hover {
+    border: none!important;
+    text-align: left;
+    background: #07a58a !important;
+    /*
+    border-bottom: 1px solid white!important;    
+    padding: 0!important;
+    padding-top: 4px!important;*/
+}
+
+.aceLITabs span:hover {
+    border: none!important;
+    text-align: left;
+    /*padding: 0!important;*/
+}
+
+.aceLITabs li a {
+    text-decoration: none!important;
+    color: white!important;
+    text-align: left;
+}
+
+.aceLITabs li a:hover {
+    color: white!important;
+    text-align: left;
+    /*
+    padding: 0!important;
+    border: none!important;*/
+}
+
+
+/* End Navigation tab style */
+
+
+/* Begin Tutorial tab style */
+
+#hidetutorial {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.4;
+    transition: opacity 1s;
+    padding: 1px;
+    z-index: 1000000;
+    display: none;
+}
+
+#closetutorial {
+    display: none;
+}
+
+#nexttutorial {
+    display: none;
+}
+
+.popover {
+    z-index: 10000000;
+}
+
+
+/* End Tutorial tab style */

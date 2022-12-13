@@ -1,0 +1,76 @@
+@import '../../../styles/colors', '../../../styles/formats', '../../../styles/typography';
+
+.select-input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    
+    .react-select {
+        .select {
+            &__control {
+                min-height: $spacing-stack-xxxlarge;
+                cursor: pointer;
+                box-shadow: none !important;
+            }
+            &__control--is-focused {
+                border-color: $color-brand-primary-dark;
+            }
+            &__indicator-separator {
+                display: none;
+            }
+
+            &__input-container, &__single-value {
+                font-family: $font-families-reading;
+                font-weight: $font-weight-medium;
+                font-size: $font-size-md;
+                line-height: $line-height-lg;
+                color: $color-aliases-plataforma-textdefault;
+            }
+
+            &__control--is-disabled {
+                border-color: $color-aliases-plataforma-border;
+                background-color: transparent;
+
+                .select__dropdown-indicator {
+                    svg path {
+                        fill: $color-aliases-plataforma-border;
+                    }
+                }
+            }
+            &__multi-value__remove {
+                svg path {
+                    fill: $color-base-white;
+                }
+            }
+        }
+    }
+
+    label {
+        color: $color-aliases-plataforma-textdefault;
+        text-align: left;
+        transition: .2s;
+        position: absolute;
+        top: -10px;
+        left: 12px;
+        background: $color-base-white;
+        padding: 4px;
+    }
+
+    .select--is-disabled + label {
+        color: $color-aliases-plataforma-border;
+    }
+
+    &.invalid {
+        label {
+            color: $color-feedback-error-base;
+        }
+        .react-select {
+            .select {
+                &__control {
+                    border-color: $color-feedback-error-base;
+                }
+            }
+        }
+    }
+}

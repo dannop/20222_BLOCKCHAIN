@@ -1,0 +1,192 @@
+@import '../../styles/colors', '../../styles/formats';
+
+.default-btn {
+    display: inline-block;
+    text-align: center;
+
+    transition: .2s;
+
+    span {
+        color: inherit;
+        font: inherit;
+    }
+
+    &.primary {
+        background: $color-brand-primary-dark;
+        color: $color-base-white;
+
+        &:hover, &:focus {
+            background: $color-brand-primary-medium;
+        }
+
+        &.btn-outline {
+            background: transparent;
+            color: $color-brand-primary-dark;
+            border: 2px solid $color-brand-primary-dark;
+
+            &.btn-icon {
+                svg path {
+                    fill: $color-brand-primary-dark;
+                }
+            }
+
+            &:hover, &:focus {
+                background: rgba($color-brand-primary-dark, $opacity-level-xlight);
+            }
+        }
+    }
+
+    &.secondary {
+        background: $color-brand-secondary-dark;
+        color: $color-base-white;
+
+        &:hover, &:focus {
+            background: $color-brand-secondary-medium;
+        }
+
+        &.btn-outline {
+            background: transparent;
+            color: $color-brand-secondary-dark;
+            border: 2px solid $color-brand-secondary-dark;
+
+            &.btn-icon {
+                svg path {
+                    fill: $color-brand-secondary-dark;
+                }
+            }
+
+            &:hover, &:focus {
+                background: rgba($color-brand-secondary-dark, $opacity-level-xlight);
+            }
+        }
+    }
+
+    &.error {
+        background: $color-feedback-error-base;
+        color: $color-base-white;
+
+        &:hover, &:focus {
+            background: rgba($color-feedback-error-base, $opacity-level-medium);
+        }
+
+        &.btn-outline {
+            background: transparent;
+            color: $color-feedback-error-base;
+            border: 2px solid $color-feedback-error-base;
+
+            &.btn-icon {
+                svg path {
+                    fill: $color-feedback-error-base;
+                }
+            }
+
+            &:hover, &:focus {
+                background: rgba($color-feedback-error-base, $opacity-level-xlight);
+            }
+        }
+    }
+
+    &.btn-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 !important;
+        border-radius: $border-radius-md !important;
+    }
+
+    &:disabled {
+        background: $color-text-100;
+        color: $color-text-300;
+
+        &.btn-icon {
+            svg path {
+                fill: $color-text-300;
+            }
+        }
+
+        &:hover, &:focus {
+            background: $color-text-100;
+            color: $color-text-300;
+        }
+    }
+
+    &.btn-outline {
+        &:disabled {
+            color: $color-text-300;
+            border: 2px solid $color-text-300;
+
+            &.btn-icon {
+                svg path {
+                    fill: $color-text-300;
+                }
+            }
+
+            &:hover, &:focus {
+                background: transparent;
+            }
+        }
+    }
+
+    &.btn-lg {
+        height: 47px;
+        padding: 14px $spacing-stack-xlarge;
+        border-radius: $border-radius-md;
+
+        &.btn-icon {
+            max-width: 48px;
+            height: 48px;
+            width: 100%;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &.btn-md {
+        height: 45px;
+        padding: 14px $spacing-stack-large;
+        border-radius: $border-radius-md;
+
+        &.btn-icon {
+            max-width: 40px;
+            height: 40px;
+            width: 100%;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &.btn-sm {
+        height: 27px;
+        padding: $spacing-stack-xsmall $spacing-stack-small;
+        border-radius: $border-radius-sm;
+
+        &.btn-icon {
+            max-width: 32px;
+            height: 32px;
+            width: 100%;
+
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        &.btn-outline {
+            border-width: $border-widths-md;
+        }
+    }
+
+    &.btn-block {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

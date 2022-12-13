@@ -1,0 +1,15 @@
+@import '../../styles/colors', '../../styles/formats';
+
+.empty-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    text-align: center;
+
+    // .empty-list-button {
+    //     padding-right: 24px !important;
+    //     padding-left: 24px !important;
+    // }
+}

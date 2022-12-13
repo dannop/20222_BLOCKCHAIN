@@ -1,0 +1,29 @@
+@import '../../../styles/colors', '../../../styles/formats';
+
+.alert-modal {
+
+    .modal-dialog {
+        max-width: 450px;
+    }
+
+    .modal-content {
+        border-radius: $border-radius-lg;
+    }
+
+    .modal-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        padding: $spacing-stack-xlarge 72px;
+
+        .body-md {
+            strong {
+                font-size: inherit;
+                color: inherit;
+                font-family: inherit;
+            }
+        }
+    }
+}

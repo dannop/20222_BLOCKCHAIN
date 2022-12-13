@@ -1,0 +1,309 @@
+/*
+        INDEX
+
+    - default-alert
+    - react-dataTable
+    - react-toastify
+    - react-dropzone
+    - react-bootstrap
+        - dropdown
+        - accordion
+        - card
+        - tooltip
+*/
+
+/*   default-alert   */
+
+.default-alert {
+    border-radius: $spacing-stack-xsmall;
+
+    &-primary {
+        background: rgba($color-brand-primary-light, 0.32);
+    }
+
+    &-text {
+        font: $font-weight-regular $font-size-xs $font-families-default;
+        line-height: $line-height-none;
+        margin: 0;
+
+        strong {
+            color: inherit;
+            font-size: inherit;
+            font-family: inherit;
+        }
+    }
+
+    &-link {
+        text-decoration: underline;
+        font: $font-weight-regular $font-size-xs $font-families-default;
+        line-height: $line-height-none;
+        margin: 0;
+
+        color: $color-brand-primary-dark;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+/*   react-dataTable   */
+
+.react-dataTable {
+    border-radius: $border-radius-md;
+    border: $border-widths-md solid $color-aliases-plataforma-border;
+    & > div {
+        border-radius: 0;
+    }
+    .rdt_TableHead {
+        .rdt_TableHeadRow {
+            background: $color-text-100;
+
+            .rdt_TableCol {
+                .rdt_TableCol_Sortable {
+                    & > div {
+                        font-family: $font-families-reading;
+                        font-weight: $font-weight-bold;
+                        font-size: 13px;
+                        line-height: $line-height-none;
+                        color: $color-aliases-plataforma-textdefault;
+                    }
+                }
+            }
+        }
+    }
+    .rdt_TableBody {
+        .rdt_TableRow {
+            border-color: $color-aliases-plataforma-border;
+            .rdt_TableCell {
+                height: $spacing-stack-xxlarge;
+
+                & > div {
+                    font-family: $font-families-reading;
+                    font-weight: $font-weight-regular;
+                    font-size: $font-size-xs;
+                    line-height: $line-height-lg;
+                    color: $color-aliases-plataforma-textdefault;
+                    margin: 0;
+                }
+
+                &:first-child {
+                    padding-left: $spacing-stack-medium;
+                }
+            }
+        }
+    }
+}
+
+/*    react-toastify    */
+
+.default-toast {
+    border-radius: $spacing-stack-xsmall !important;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12) !important;
+    padding: 20px $spacing-stack-medium !important;
+
+    h6 {
+        font: $font-weight-bold $font-size-xs $font-families-default !important;
+    }
+    &.Toastify {
+
+        &__toast--success {
+            background: $color-feedback-success-light !important;
+
+            h6 {
+                color: $color-feedback-success-base !important;
+            }
+        }
+
+        &__toast--warning {
+            background: $color-feedback-warning-light !important;
+
+            h6 {
+                color: $color-feedback-warning-base !important;
+            }
+        }
+
+        &__toast--error {
+            background: $color-feedback-error-light !important;
+
+            h6 {
+                color: $color-feedback-error-base !important;
+            }
+        }
+
+    }
+}
+
+.Toastify__toast-icon {
+    display: none !important;
+}
+
+/*   react-dropzone   */
+
+.dropzone {
+    border: $border-widths-lg dashed $color-aliases-plataforma-border;
+    border-radius: $border-radius-md;
+    padding: $spacing-stack-xlarge 0;
+    transition: .2s;
+
+    &-drag {
+        border-color: $color-brand-primary-medium;
+    }
+
+    .dropzone-content {
+        p {
+            max-width: 280px;
+            width: 100%;
+            text-align: center;
+        }
+
+        // button {
+        //     padding-left: $spacing-stack-medium !important;
+        //     padding-right: $spacing-stack-medium !important;
+        // }
+    }
+}
+
+/*   react-bootstrap   */
+
+/*   dropdown   */
+
+.dropdown {
+    .btn {
+        background: none;
+        padding: 0;
+        border: none;
+        line-height: unset;
+        
+        &:after {
+            display: none;
+        }
+
+        &:focus, &:hover {
+            background-color: none;
+            box-shadow: none;
+        }
+
+        &.dropdown-toggle {
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+    
+    .dropdown-toggle {
+        &:after {
+            display: none !important;
+        }
+    }
+
+    .dropdown-menu {
+        border: none;
+        box-shadow: 0px 5px 30px rgba(172, 171, 183, 0.4);
+        padding: $spacing-stack-medium 0;
+        border-radius: $border-radius-md;
+        min-width: 190px;
+
+        .dropdown-item {
+            padding: $spacing-stack-xsmall $spacing-stack-small;
+            font-family: $font-families-reading;
+            font-weight: $font-weight-regular;
+            font-size: $font-size-xs;
+            line-height: $line-height-lg;
+            color: $color-aliases-plataforma-textdefault;
+
+            &:focus {
+                background-color: #e9ecef;
+            }
+        }
+    }
+}
+
+/*   accordion   */
+
+.accordion {
+    .accordion-item {
+        border: $border-widths-md solid $color-aliases-plataforma-border;
+        border-radius: $border-radius-md;
+        
+        & + .accordion-item {
+            margin-top: $spacing-stack-medium;
+        }
+        
+        .accordion-button {
+            padding: $spacing-stack-large;
+            color: $color-aliases-plataforma-textdefault;
+            border-radius: $border-radius-md !important;
+
+            font-family: $font-families-default;
+            font-weight: $font-weight-bold;
+            font-size: $font-size-lg;
+            line-height: $line-height-lg;
+            color: $color-aliases-plataforma-supporttext;
+
+            &:after {
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z' fill='black'/%3E%3C/svg%3E%0A");
+            }
+
+            &:not(.collapsed) {
+                &:after {
+                    transform: rotate(0);
+                    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 13H5V11H19V13Z' fill='black'/%3E%3C/svg%3E%0A");
+                }
+                box-shadow: none;
+                background-color: transparent;
+                color: $color-aliases-plataforma-textdefault;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        &.valid {
+            border-color: $color-feedback-success-base;
+            .accordion-button {
+                &.collapsed {
+                    background: $color-feedback-success-light;
+                    &:after {
+                        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z' fill='%23019180'/%3E%3C/svg%3E%0A");
+                    }
+                }
+                span {
+                    color: $color-feedback-success-base;
+                }
+
+                &:after {
+                    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 13H5V11H19V13Z' fill='%23019180'/%3E%3C/svg%3E%0A");
+                }
+            }
+        }
+
+        .accordion-body {
+            padding: $spacing-stack-xxlarge $spacing-stack-large;
+            padding-top: $spacing-stack-xsmall;
+        }
+    }
+}
+
+/*   card   */
+
+.card {
+    background-color: $color-base-white;
+    border-radius: $border-radius-lg;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, $opacity-level-xlight);
+    border: none;
+
+    .card-body {
+        padding: 36px $spacing-stack-xxlarge;
+    }
+}
+
+/*   tooltip   */
+
+.tooltip {
+    .tooltip-inner {
+        padding: $spacing-stack-small;
+        text-align: left;
+    }
+}

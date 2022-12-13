@@ -1,0 +1,318 @@
+.display-lg {
+    font-family: $font-families-default;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xhuge;
+    line-height: $line-height-sm;
+    color: $color-aliases-plataforma-textdefault;
+    margin: 0;
+}
+
+.display-md {
+    font-family: $font-families-default;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-huge;
+    line-height: $line-height-sm;
+    color: $color-aliases-plataforma-textdefault;
+    margin: 0;
+}
+
+.display-sm {
+    font-family: $font-families-default;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-4xlg;
+    line-height: $line-height-sm;
+    color: $color-aliases-plataforma-textdefault;
+    margin: 0;
+}
+
+.heading-lg {
+    font-family: $font-families-default;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-3xlg;
+    line-height: $line-height-base;
+    color: $color-aliases-plataforma-textdefault;
+    margin: 0;
+}
+
+.heading-md {
+    font-family: $font-families-default;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xxlg;
+    line-height: $line-height-base;
+    color: $color-aliases-plataforma-textdefault;
+    margin: 0;
+}
+
+.heading-sm {
+    font-family: $font-families-default;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xlg;
+    line-height: $line-height-base;
+    color: $color-aliases-plataforma-textdefault;
+    margin: 0;
+}
+
+.subtitle-lg {
+    font-family: $font-families-default;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-lg;
+    line-height: $line-height-lg;
+    color: $color-aliases-plataforma-supporttext;
+    margin: 0;
+}
+
+.subtitle-md {
+    font-family: $font-families-default;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-md;
+    line-height: $line-height-lg;
+    color: $color-aliases-plataforma-supporttext;
+    margin: 0;
+}
+
+.body-lg {
+    font-family: $font-families-reading;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-md;
+    line-height: $line-height-lg;
+    color: $color-aliases-plataforma-textdefault;
+    margin: 0;
+}
+
+.body-md {
+    font-family: $font-families-reading;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-xs;
+    line-height: $line-height-lg;
+    color: $color-aliases-plataforma-textdefault;
+    margin: 0;
+}
+
+.body-sm {
+    font-family: $font-families-reading;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-xxs;
+    line-height: $line-height-lg;
+    color: $color-aliases-plataforma-textdefault;
+    margin: 0;
+}
+
+.body-xsm {
+    font-family: $font-families-reading;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-xxxs;
+    line-height: $line-height-lg;
+    color: $color-aliases-plataforma-textdefault;
+    margin: 0;
+}
+
+.label-lg {
+    font-family: $font-families-default;
+    font-weight: $font-weight-bold;
+    font-size: 15px;
+    line-height: $line-height-none;
+    color: $color-aliases-plataforma-textdefault;
+    margin: 0;
+}
+
+.label-md {
+    font-family: $font-families-reading;
+    font-weight: $font-weight-bold;
+    font-size: 13px;
+    line-height: $line-height-none;
+    color: $color-aliases-plataforma-textdefault;
+    margin: 0;
+}
+
+.label-sm {
+    font-family: $font-families-reading;
+    font-weight: $font-weight-medium;
+    font-size: 11px;
+    line-height: $line-height-none;
+    color: $color-aliases-plataforma-textdefault;
+    margin: 0;
+}
+
+.text-link {
+    border: none;
+    background: none;
+    text-decoration: none;
+    cursor: pointer;
+
+    color: $color-brand-primary-dark;
+    transition: .3s;
+
+    font-size: 15px;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-none;
+    font-family: $font-families-default;
+
+    span {
+        font: inherit;
+        color: inherit;
+    }
+
+    // svg {
+    //     width: 14px;
+    //     height: 14px;
+    //     path {
+    //         fill: $color-brand-primary-dark;
+    //     }
+    // }
+    
+    &:hover, &:focus {
+        text-decoration: underline;
+        color: $color-brand-primary-medium;
+        svg {
+            path {
+                fill: $color-brand-primary-medium;
+            }
+        }
+    }
+
+    &.text-md {
+        font-size: 13px;
+        font-family: $font-families-reading;
+    }
+
+    &.text-sm {
+        font-size: 11px;
+        font-weight: $font-weight-medium;
+        font-family: $font-families-reading;
+        svg {
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    &:disabled {
+        color: $color-text-300;
+        svg {
+            path {
+                fill: $color-text-300;
+            }
+        }
+
+        &:hover {
+            color: $color-text-300;
+            svg {
+                path {
+                    fill: $color-text-300;
+                }
+            }
+        }
+    }
+}
+
+.icon-link {
+    svg {
+        path {
+            fill: $color-aliases-plataforma-textdefault;
+            transition: .2s;
+        }
+    }
+
+    &:hover {
+        svg {
+            path {
+                fill: $color-brand-primary-dark;
+            }
+        }
+    }
+}
+
+.text-black {
+    color: $color-base-black;
+}
+
+.text-white {
+    color: $color-base-white;
+}
+
+.text-primary {
+    color: $color-brand-primary-dark !important;
+} 
+
+.text-secondary {
+    color: $color-brand-secondary-medium;
+}
+
+.text-gray-900 {
+    color: $color-text-900;
+}
+
+.text-gray-800 {
+    color: $color-text-800;
+}
+
+.text-gray-700 {
+    color: $color-text-700;
+}
+
+.text-gray-500 {
+    color: $color-text-500;
+}
+
+.text-gray-300 {
+    color: $color-text-300;
+}
+
+.text-gray-100 {
+    color: $color-text-100;
+}
+
+.text-success {
+    color: $color-feedback-success-base;
+}
+
+.text-warning {
+    color: $color-feedback-warning-base;
+}
+
+.text-error {
+    color: $color-feedback-error-base;
+}
+
+.text-placeholder {
+    color: $color-aliases-plataforma-placeholder;
+}
+
+.text-default {
+    color: $color-aliases-plataforma-textdefault;
+}
+
+.text-support {
+    color: $color-aliases-plataforma-supporttext;
+}
+
+.text-overflow {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.box-shadow {
+    box-shadow: $box-shadow-base;
+}
+
+.scroll-container {
+    overflow: auto;
+
+    // Firefox scrollbar
+    scrollbar-width: thin;
+    // scrollbar-color: $NEUTRAL_MEDIUM $NEUTRAL_LIGHT;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 8px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: rgba($color-text-500, 0.3);
+        border-radius: 8px;
+    }
+}

@@ -1,0 +1,23 @@
+@import '../../../styles/colors', '../../../styles/formats';
+
+.number-input-container {
+    border-radius: $border-radius-sm;
+    border: $border-widths-md solid $color-aliases-plataforma-border;
+    padding: 16px 12px;
+    height: 56px;
+
+    input {
+        width: 100px;
+        text-align: center;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+}

@@ -1,0 +1,38 @@
+version: "3.9"
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRESQL_PASSWORD=password
+    ports:
+      - "5432:5432"
+  redis:
+    image: redis:7.0-alpine
+    command: --port 6380
+    ports:
+      - '6380:6380'
+  web:
+    build: .
+    stdin_open: true
+    tty: true
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - DOCKERIZED=true
+      - LAUNCHY_DRY_RUN=true
+      - BROWSER=/dev/null
+      - POSTGRESQL_HOST=db
+      - POSTGRESQL_USER_NAME=postgres
+      - POSTGRESQL_PASSWORD=password
+      - AWS_ACCESS_KEY_ID=AKIAUF3NHMB2Q3J6Y3OE
+      - AWS_SECRET_ACCESS_KEY=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
+      - AWS_REGION=us-east-1
+      - AWS_BUCKET=api-dev

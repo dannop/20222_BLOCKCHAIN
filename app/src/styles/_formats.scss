@@ -1,0 +1,42 @@
+// ------ BORDER RADIUS -------
+
+$border-radius-none: 0px;
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 16px;
+$border-radius-pill: 500px;
+$border-radius-circular: 50%;
+
+// ------ BORDER WIDTHS -------
+
+$border-widths-none: 0px;
+$border-widths-sm: 0.5px;
+$border-widths-md: 1px;
+$border-widths-lg: 2px;
+$border-widths-heavy: 4px;
+
+// ------ BOX SHADOW -------
+
+$box-shadow-base: 0 4px 24px rgba(0, 0, 0, 0.1);
+
+// ------ OPACITY LEVELS -------
+
+$opacity-level-default: 1;
+$opacity-level-medium: 0.8;
+$opacity-level-translucent: 0.64;
+$opacity-level-light: 0.32;
+$opacity-level-xlight: 0.08;
+
+// ------ SPACEMENTS -------
+
+$spacing-stack-pixel: 1px;
+$spacing-stack-xxsmall: 4px;
+$spacing-stack-xsmall: 8px;
+$spacing-stack-small: 16px;
+$spacing-stack-medium: 24px;
+$spacing-stack-large: 32px;
+$spacing-stack-xlarge: 40px;
+$spacing-stack-xxlarge: 48px;
+$spacing-stack-xxxlarge: 56px;
+$spacing-stack-huge: 64px;
+$spacing-stack-xhuge: 80px;

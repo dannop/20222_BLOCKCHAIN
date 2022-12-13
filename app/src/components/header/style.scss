@@ -1,0 +1,30 @@
+@import '../../styles/formats', '../../styles/colors';
+
+.header {
+    height: $spacing-stack-xxxlarge;
+    box-shadow: $box-shadow-base;
+
+    img {
+        max-width: 110px;
+    }
+
+    .container {
+        height: 100%;
+
+        > div {
+            height: 100%;
+        }
+    }
+
+    nav {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li .active {
+                color: $color-brand-secondary-medium;
+            }
+        }
+    }
+}
