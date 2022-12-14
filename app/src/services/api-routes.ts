@@ -1,4 +1,4 @@
 import * as AuthApi from "../pages/auth/auth-api";
-import * as SessionApi from "../pages/session/session-api";
+import * as AppApi from "../pages/app-api";
 
-export { AuthApi, SessionApi };
+export { AuthApi, AppApi };

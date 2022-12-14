@@ -9,7 +9,7 @@ const NavLayout = (props: LayoutProps) => {
 
     return (
       <div>
-          <Header menuItems={navigation} />
+          {/* <Header menuItems={navigation} /> */}
           {children}
       </div>
     )

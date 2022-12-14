@@ -1,4 +1,4 @@
-import { postReq } from "../../services/api";
+import { postReq } from "../services/api";
 
 export const session = {
   login:             async (body: string) => { return await postReq('login', 'sessao/login', body, false) },

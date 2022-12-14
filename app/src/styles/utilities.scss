@@ -170,6 +170,12 @@
         }
     }
 
+    &:hover {
+        &:disabled {
+            text-decoration: none;
+        }
+    }
+
     &.text-md {
         font-size: 13px;
         font-family: $font-families-reading;
