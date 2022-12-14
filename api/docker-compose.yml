@@ -32,7 +32,3 @@ services:
       - POSTGRESQL_HOST=db
       - POSTGRESQL_USER_NAME=postgres
       - POSTGRESQL_PASSWORD=password
-      - AWS_ACCESS_KEY_ID=AKIAUF3NHMB2Q3J6Y3OE
-      - AWS_SECRET_ACCESS_KEY=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
-      - AWS_REGION=us-east-1
-      - AWS_BUCKET=api-dev
