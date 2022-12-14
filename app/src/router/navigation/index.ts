@@ -1,8 +1,8 @@
 const navigation = [
   {
-    id: 'docs',
-    title: 'Docs',
-    navLink: '/docs'
+    id: 'index',
+    title: 'Home',
+    navLink: '/'
   }
 ];
 

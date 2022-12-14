@@ -28,15 +28,6 @@ const Header = (props: HeaderProps) => {
                                     <NavLink className="text-link" to={item.navLink}>{item.title}</NavLink>
                                 </li>
                             ))}
-                            <li className="mx-sm">
-                                <Link 
-                                    to='/'
-                                    onClick={() => StorageService.logout()} 
-                                    className="text-link"
-                                >
-                                    Sair
-                                </Link>
-                            </li>
                         </ul>
                     </nav>
                 </div>

@@ -1,23 +1,6 @@
 import { toast } from 'react-toastify';
 
-const URL_PROD = 'http://127.0.0.1:3333/'; 
-const URL_TEST = 'http://127.0.0.1:3333/';
-
-const HOST_NAME = window.location.hostname;
-const parts = HOST_NAME.split('.');
-
-let last_index = -2;
-const last = parts[parts.length - 1];
-const is_localhost = last === 'localhost';
-if (is_localhost) last_index = -1;
-
-const subdomain = parts.slice(0, last_index).join('.');
-
-let URL_API = URL_PROD;
-
-if (subdomain) {
-  if (subdomain === 'test') URL_API = URL_TEST;
-}
+const URL_API = 'http://127.0.0.1:3333/'; 
 
 const CONFIG = {
   URL: URL_API
@@ -36,60 +19,21 @@ const setHeaders = (check: boolean) => {
   return headers;
 }
 
-const getFilePDF = async (resp: any) => {
-  const pdf = await resp.blob();
-  const file = new Blob([pdf], {type: 'application/pdf'});
-  const fileURL = window.URL.createObjectURL(file);
-  window.open(fileURL);
-  setTimeout(() => {
-    window.URL.revokeObjectURL(fileURL);
-  }, 100);
-};
-
-const getFileXLS = async (resp: any) => { 
-  const xls = await resp.blob();
-  const file = new Blob([xls], {type: 'application/vnd.ms-excel'});
-  const fileURL = window.URL.createObjectURL(file);
-  window.open(fileURL);
-  setTimeout(() => {
-    window.URL.revokeObjectURL(fileURL);
-  }, 100);
-};
-
-const getFileHTML = async (resp: any) => { 
-  const html = await resp.blob();
-  const file = new Blob([html], {type: 'text/html'});
-  const fileURL = window.URL.createObjectURL(file);
-  window.open(fileURL);
-  setTimeout(() => {
-    window.URL.revokeObjectURL(fileURL);
-  }, 100);
-};
-
 const getResp = async (label: string, resp: any) => {  
   if (resp) {
-    const content_type = resp.headers.get("Content-Type");    
-    if (content_type.includes("pdf")) {
-      if (resp.status === 200) await getFilePDF(resp);      
-    } else if (content_type.includes("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")) {
-      if (resp.status === 200) await getFileXLS(resp);
-    } else if (content_type.includes("text/html")) {
-      if (resp.status === 200) await getFileHTML(resp);
-    } else {
-      const json = await resp.json();
-      if (resp.status !== 200) {
-        if (json && json.Message && json.Message !== '') {
-          
-          if (!toast.isActive('toastDefaultError')) toast.error(`Erro no ${label}: `+json.Message, {autoClose: false, toastId: 'toastDefaultError'});
-          else toast.update('toastDefaultError', {render: `Erro no ${label}: `+json.Message, autoClose: false});
-          
-          if (json.ValidationErrors) {
-            return json
-          }
-        } 
-      } else if (json) return json;
-    }
-  } 
+    const json = await resp.json();
+    if (resp.status !== 200) {
+      if (json && json.Message && json.Message !== '') {
+        
+        if (!toast.isActive('toastDefaultError')) toast.error(`Erro no ${label}: `+json.Message, {autoClose: false, toastId: 'toastDefaultError'});
+        else toast.update('toastDefaultError', {render: `Erro no ${label}: `+json.Message, autoClose: false});
+        
+        if (json.ValidationErrors) {
+          return json
+        }
+      } 
+    } else if (json) return json;
+  }
   return null;
 }
 

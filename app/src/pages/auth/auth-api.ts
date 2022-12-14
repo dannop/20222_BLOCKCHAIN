@@ -1,6 +1,6 @@
 import { postReq } from "../../services/api";
 
-export const session = {
-  login:             async (body: string) => { return await postReq('login', 'sessao/login', body, false) },
-  recovery_password: async (body: string, email: string) => { return await postReq('login', `sessao/RecuperarSenha/${email}`, body, false) },
+export const auth = {
+  login:             async (body: any) => { return await postReq('login', 'login', JSON.stringify(body), false) },
+  register:          async (body: any) => { return await postReq('register', 'register', JSON.stringify(body), false) }
 }

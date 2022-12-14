@@ -7,7 +7,7 @@ import TextInput from '../../../components/forms/text-input';
 import DefaultBtn from '../../../components/default-btn';
 import AuthLayout from '../components/auth-layout';
 
-import LogoImg from '../../../assets/images/conecta-icon.png';
+import LogoImg from '../../../assets/images/chopper-coin.png';
 
 export default function SignUpPage(props: any){
   const { setLoading } = useContext(LoaderContext);
@@ -25,14 +25,14 @@ export default function SignUpPage(props: any){
   const register = async (name: string, email: string, password: string) => {
     setLoading(true);
     const resp = {token: `${name}_${password}`, email};
-    StorageService.login(resp.token, resp.token);
+    StorageService.login(resp.token);
     props.history.push({pathname: '/home'});
   }
 
   return (
     <AuthLayout>
       <>
-        <img className="logoImg" src={LogoImg} alt="Logo da Conecta" />
+        <img className="logoImg" src={LogoImg} alt="Logo do Projeto" />
         <div className="mb-sm w-100">
           <TextInput 
             type="text"
