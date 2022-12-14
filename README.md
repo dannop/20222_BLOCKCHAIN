@@ -1,4 +1,4 @@
-# Trabalho de Blockchain
+# Trabalho de Blockchain 2022.2
 
 Trabalho de blockchain do Grupo: Ary, Daniel e Luiza
 
@@ -8,7 +8,5 @@ Trabalho de blockchain do Grupo: Ary, Daniel e Luiza
 - Rails 7.0.3
 - React 17.0.2
 - Typescript 4.4.3
-
-## Bibliotecas utilizadas
-
-- [Devise](devise-link) - para autenticação dos usuários
+- Neocompiler V3
+- NEOSCAN
